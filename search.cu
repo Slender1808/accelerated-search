@@ -28,7 +28,7 @@ int main(void) {
   // Dado
 
 
-  string data[4][2];
+  string data[4][3];
 
   // dados
   data[0][0] = "test";
@@ -40,6 +40,11 @@ int main(void) {
   data[1][1] = "4";
   data[2][1] = "4";
   data[3][1] = "4";
+  // hash sum
+  data[0][2] = "4";
+  data[1][2] = "4";
+  data[2][2] = "4";
+  data[3][2] = "4";
 
   string alvo = "gato";
 

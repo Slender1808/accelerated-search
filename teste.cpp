@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <string>
+#include <fstream>
 using namespace std;
 
 int sizeString(string data)
@@ -16,8 +17,25 @@ int sumString(string data)
   return result;
 }
 
-int main(void)
+int main()
 {
+  // Teste
+  // Create a text string, which is used to output the text file
+  string myText;
+  string testeFile = "";
+  // Read from the text file
+  ifstream MyReadFile("teste.txt");
+
+  while (getline(MyReadFile, myText))
+  {
+    testeFile = testeFile + " " + myText;
+  }
+
+  printf("Read file %s \n", testeFile.c_str());
+  // Close the file
+  MyReadFile.close();
+
+  
   string data[4][2] = {{"aabb", "dados 1"}, {"casa", "dados 2"}, {"gato", "dados 3"}, {"foto", "dados 4"}};
 
   int metaData[4][2];

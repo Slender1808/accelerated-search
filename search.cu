@@ -28,7 +28,7 @@ int main(void) {
   // Dado
 
 
-  string data[4][3];
+  string data[][] = {{"test"},{"casa"},{"gato"},{"foto"}};
 
   // dados
   data[0][0] = "test";

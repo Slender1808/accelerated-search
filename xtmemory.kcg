@@ -1,0 +1,157 @@
+# callgrind format
+version: 1
+creator: xtree-1
+pid: 160980
+cmd: ./teste
+
+positions: line
+event: curB : currently allocated Bytes
+event: curBk : currently allocated Blocks
+event: totB : total allocated Bytes
+event: totBk : total allocated Blocks
+event: totFdB : total Freed Bytes
+event: totFdBk : total Freed Blocks
+events: curB  curBk  totB  totBk  totFdB  totFdBk 
+fl=(1) UnknownFile???
+fn=(1) UnknownFn???
+0
+cfi=(2) ./elf/dl-init.c
+cfn=(2) _dl_init
+calls=0 37
+0 0 0 72704 1 0 0
+fl=(2)
+fn=(2)
+37
+cfi=(2)
+cfn=(3) call_init.part.0
+calls=0 74
+37 0 0 72704 1 0 0
+fl=(2)
+fn=(3)
+74
+cfi=(1)
+cfn=(1)
+calls=0 0
+74 0 0 72704 1 0 0
+fl=(1)
+fn=(1)
+0 0 0 72704 1 0 0
+
+fl=(1)
+fn=(4) main
+0
+cfi=(3) ./stdio-common/printf.c
+cfn=(5) printf
+calls=0 33
+0 0 0 1024 1 0 0
+fl=(3)
+fn=(5)
+33
+cfi=(4) ./stdio-common/vfprintf-internal.c
+cfn=(6) __vfprintf_internal
+calls=0 239
+33 0 0 1024 1 0 0
+fl=(4)
+fn=(6)
+239
+cfi=(5) ./libio/fileops.c
+cfn=(7) _IO_file_xsputn@@GLIBC_2.2.5
+calls=0 1244
+239 0 0 1024 1 0 0
+fl=(5)
+fn=(7)
+1244
+cfi=(5)
+cfn=(8) _IO_file_overflow@@GLIBC_2.2.5
+calls=0 745
+1244 0 0 1024 1 0 0
+fl=(5)
+fn=(8)
+745
+cfi=(6) ./libio/genops.c
+cfn=(9) _IO_doallocbuf
+calls=0 347
+745 0 0 1024 1 0 0
+fl=(6)
+fn=(9)
+347
+cfi=(7) ./libio/filedoalloc.c
+cfn=(10) _IO_file_doallocate
+calls=0 101
+347 0 0 1024 1 0 0
+fl=(7)
+fn=(10)
+101 0 0 1024 1 0 0
+
+fl=(8) ./csu/../csu/libc-start.c
+fn=(11) (below main)
+348
+cfi=(9) ./stdlib/exit.c
+cfn=(12) exit
+calls=0 139
+348 0 0 0 0 72704 1
+fl=(9)
+fn=(12)
+139
+cfi=(9)
+cfn=(13) __run_exit_handlers
+calls=0 132
+139 0 0 0 0 72704 1
+fl=(9)
+fn=(13)
+132
+cfi=(1)
+cfn=(14) _vgnU_freeres
+calls=0 0
+132 0 0 0 0 72704 1
+fl=(1)
+fn=(14)
+0
+cfi=(1)
+cfn=(15) __gnu_cxx::__freeres()
+calls=0 0
+0 0 0 0 0 72704 1
+fl=(1)
+fn=(15)
+0 0 0 0 0 72704 1
+
+fl=(8)
+fn=(11)
+348
+cfi=(9)
+cfn=(12)
+calls=0 139
+348 0 0 0 0 1024 1
+fl=(9)
+fn=(12)
+139
+cfi=(9)
+cfn=(13)
+calls=0 132
+139 0 0 0 0 1024 1
+fl=(9)
+fn=(13)
+132
+cfi=(1)
+cfn=(14)
+calls=0 0
+132 0 0 0 0 1024 1
+fl=(1)
+fn=(14)
+0
+cfi=(1)
+cfn=(16) __libc_freeres
+calls=0 0
+0 0 0 0 0 1024 1
+fl=(1)
+fn=(16)
+0
+cfi=(1)
+cfn=(17) buffer_free
+calls=0 0
+0 0 0 0 0 1024 1
+fl=(1)
+fn=(17)
+0 0 0 0 0 1024 1
+
+totals: 0 0 73728 2 73728 2
